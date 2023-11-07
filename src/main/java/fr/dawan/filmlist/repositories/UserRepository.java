@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User,Long> {
 
-    @Query(value="SELECT u FROM User u WHERE u.name<:name")
+    @Query(value="SELECT u FROM User u WHERE u.name=:name")
     List<User> findUserByName(String name);
 
 }

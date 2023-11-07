@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface FilmRepository extends JpaRepository<Film,Long> {
 
-    @Query(value="SELECT f FROM Film f WHERE f.title<:title")
+    @Query(value="SELECT f FROM Film f WHERE f.title=:title")
     List<Film> findFilmByName(String title);
 
 }

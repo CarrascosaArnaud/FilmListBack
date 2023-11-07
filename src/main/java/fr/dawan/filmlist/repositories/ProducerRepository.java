@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProducerRepository extends JpaRepository<Producer,Long> {
 
-    @Query(value="SELECT p FROM Producer p WHERE p.name<:name")
+    @Query(value="SELECT p FROM Producer p WHERE p.name=:name")
     List<Producer> findProducerByName(String name);
 
 }

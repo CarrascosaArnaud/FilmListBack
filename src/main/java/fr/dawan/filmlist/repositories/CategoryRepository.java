@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category,Long> {
 
-    @Query(value="SELECT c FROM Category c WHERE c.name<:name")
+    @Query(value="SELECT c FROM Category c WHERE c.name=:name")
     List<Category> findCategoryByName(String name);
 
 }

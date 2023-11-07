@@ -88,8 +88,6 @@ public class Review implements Serializable {
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", score=" + score +
-                ", film=" + film +
-                ", user=" + user +
                 '}';
     }
 

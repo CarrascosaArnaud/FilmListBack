@@ -53,25 +53,26 @@ public class RepositoryRunner implements CommandLineRunner {
         }
 
         //Review
-        List <Review> rev= revRepo.findReviewByFilmId(1);//ByFilm
+        List <Review> rev= revRepo.findReviewByFilmId(filmRepo.findById(1L).get());//ByFilm
         for(Review r: rev) {
             System.out.println(r);
         }
 
-        List <Review> rev2= revRepo.findReviewById(1);//ById
-        for(Review r: rev2) {
+        rev = revRepo.findReviewByUserId(userRepo.findById(1L).get());//ByUserId
+        for(Review r: rev) {
             System.out.println(r);
         }
 
-        List <Review> rev3= revRepo.findReviewByScore(5);//ByScore
-        for(Review r: rev3) {
+        rev = revRepo.findReviewById(1);//ById
+        for(Review r: rev) {
             System.out.println(r);
         }
 
-        List <Review> rev4= revRepo.findReviewByUserId(1);//ByUserId
-        for(Review r: rev4) {
+        rev = revRepo.findReviewByScore(5);//ByScore
+        for(Review r: rev) {
             System.out.println(r);
         }
+
 
         //User
         List <User> user=userRepo.findUserByName("Pseudo");

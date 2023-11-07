@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ActorRepository extends JpaRepository<Actor,Long> {
 
-    @Query(value="SELECT a FROM Actor a WHERE a.name<:name")
+    @Query(value="SELECT a FROM Actor a WHERE a.name=:name")
     List<Actor> findActorByName(String name);
 
 }

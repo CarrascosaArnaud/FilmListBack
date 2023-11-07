@@ -33,8 +33,7 @@ public class Category implements Serializable {
         this.films = films;
     }
 
-//Getters & Setters
-
+    //Getters & Setters
 
     public long getId() {
         return id;
@@ -61,16 +60,13 @@ public class Category implements Serializable {
     }
 
     //toString
-
     @Override
     public String toString() {
         return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", films=" + films +
                 '}';
     }
-
 
     //Methods
 
