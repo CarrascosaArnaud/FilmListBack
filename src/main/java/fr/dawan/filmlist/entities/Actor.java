@@ -17,20 +17,16 @@ public class Actor implements Serializable {
     private int version;
 
     @Column(length = 50, nullable = false)
-    private String name, email;
-
-    @Column(length = 20, nullable = false)
-    private String password;
+    private String name;
 
     //Constructors
     public Actor() {
     }
 
-    public Actor(long id, String name, String email, String password) {
+    public Actor(long id, String name) {
         this.id = id;
         this.name = name;
-        this.email = email;
-        this.password = password;
+
     }
 
     //Getters & Setters
@@ -50,30 +46,13 @@ public class Actor implements Serializable {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+    //toString
     @Override
     public String toString() {
         return "Actor{" +
                 "id=" + id +
                 ", version=" + version +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 
