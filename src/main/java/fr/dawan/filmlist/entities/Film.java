@@ -31,8 +31,6 @@ public class Film implements Serializable {
     private List<Actor> actors = new ArrayList<>();
     @OneToMany(mappedBy = "film")
     private List<Review> reviews = new ArrayList<>();
-    @ManyToOne
-    private Watchlist watchlist;
 
     //Constructors
 

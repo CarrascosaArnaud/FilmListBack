@@ -30,8 +30,8 @@ public class User implements Serializable {
     private List<Film> favoriteFilms = new ArrayList<>();
     @OneToMany(mappedBy = "user")
     private List<Review> reviews = new ArrayList<>();
-    @OneToOne(mappedBy = "user")
-    private Watchlist watchlist;
+    @ManyToMany
+    private List<Film> watchlist = new ArrayList<>();
 
     //Constructors
     public User() {
