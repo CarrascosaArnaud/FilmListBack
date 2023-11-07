@@ -30,8 +30,7 @@ public class Review implements Serializable {
     public Review() {
     }
 
-    public Review(long id, String description, int score, Film film, User user) {
-        this.id = id;
+    public Review(String description, int score, Film film, User user) {
         this.description = description;
         this.score = score;
         this.film = film;
@@ -39,6 +38,15 @@ public class Review implements Serializable {
     }
 
     //Getters & Setters
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getDescription() {
         return description;

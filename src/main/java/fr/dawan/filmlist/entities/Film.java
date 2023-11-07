@@ -37,8 +37,7 @@ public class Film implements Serializable {
     public Film() {
     }
 
-    public Film(long id, String title, LocalDate releaseDate, List<Category> categories, List<Producer> producers, List<Actor> actors) {
-        this.id = id;
+    public Film(String title, LocalDate releaseDate, List<Category> categories, List<Producer> producers, List<Actor> actors) {
         this.title = title;
         this.releaseDate = releaseDate;
         this.categories = categories;
@@ -47,6 +46,15 @@ public class Film implements Serializable {
     }
 
     //Getters & Setters
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

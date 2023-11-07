@@ -28,13 +28,21 @@ public class Category implements Serializable {
     public Category() {
     }
 
-    public Category(long id, String name, List<Film> films) {
-        this.id = id;
+    public Category(String name, List<Film> films) {
         this.name = name;
         this.films = films;
     }
 
 //Getters & Setters
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

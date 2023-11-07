@@ -23,13 +23,21 @@ public class Producer implements Serializable {
     public Producer() {
     }
 
-    public Producer(long id, String name) {
-        this.id = id;
+    public Producer(String name) {
         this.name = name;
 
     }
 
     //Getters & Setters
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
