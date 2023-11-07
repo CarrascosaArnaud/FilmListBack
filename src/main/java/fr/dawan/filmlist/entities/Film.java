@@ -50,14 +50,6 @@ public class Film implements Serializable {
 
     //Getters & Setters
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -104,7 +96,6 @@ public class Film implements Serializable {
     public String toString() {
         return "Film{" +
                 "id=" + id +
-                ", version=" + version +
                 ", title='" + title + '\'' +
                 ", releaseDate=" + releaseDate +
                 ", categories=" + categories +

@@ -36,14 +36,6 @@ public class Category implements Serializable {
 
 //Getters & Setters
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -66,7 +58,6 @@ public class Category implements Serializable {
     public String toString() {
         return "Category{" +
                 "id=" + id +
-                ", version=" + version +
                 ", name='" + name + '\'' +
                 ", films=" + films +
                 '}';

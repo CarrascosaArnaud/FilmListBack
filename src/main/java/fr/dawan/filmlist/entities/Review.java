@@ -40,14 +40,6 @@ public class Review implements Serializable {
 
     //Getters & Setters
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -86,7 +78,6 @@ public class Review implements Serializable {
     public String toString() {
         return "Review{" +
                 "id=" + id +
-                ", version=" + version +
                 ", description='" + description + '\'' +
                 ", score=" + score +
                 ", film=" + film +
