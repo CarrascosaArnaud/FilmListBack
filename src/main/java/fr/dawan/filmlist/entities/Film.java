@@ -18,15 +18,21 @@ public class Film implements Serializable {
     private long id;
     @Version
     private int version;
-    private String title;
-
+    private String title,description;
     private LocalDate releaseDate;
+    @Lob
+    private byte[] filmPoster;
+    private int duration;
     @ManyToMany
     private List<Category> categories = new ArrayList<>();
     @ManyToMany
     private List<Producer> producers = new ArrayList<>();
     @ManyToMany
     private List<Actor> actors = new ArrayList<>();
+    @OneToMany(mappedBy = "film")
+    private List<Review> reviews = new ArrayList<>();
+    @ManyToOne
+    private Watchlist watchlist;
 
     //Constructors
 

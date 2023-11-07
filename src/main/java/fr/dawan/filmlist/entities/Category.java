@@ -20,7 +20,7 @@ public class Category implements Serializable {
     private int version;
     @Column(length = 50, nullable = false)
     private String name;
-    @ManyToMany
+    @ManyToMany(mappedBy = "categories")
     private List<Film> films = new ArrayList<>();
 
     //Constructors

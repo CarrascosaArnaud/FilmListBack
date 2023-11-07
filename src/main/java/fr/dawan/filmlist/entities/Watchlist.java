@@ -19,10 +19,9 @@ public class Watchlist implements Serializable {
     private int version;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany
+    @OneToMany(mappedBy = "watchlist")
     private List<Film> films = new ArrayList<>();
 
     //Constructors

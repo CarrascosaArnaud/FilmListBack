@@ -20,9 +20,9 @@ public class Review implements Serializable {
     @Column(length = 1)
     private int score;
 
-    @OneToOne
+    @ManyToOne
     private Film film;
-    @OneToOne
+    @ManyToOne
     private User user;
 
     //Constructors

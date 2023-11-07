@@ -3,6 +3,8 @@ package fr.dawan.filmlist.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name ="Users")
@@ -21,6 +23,15 @@ public class User implements Serializable {
 
     @Column(length = 20, nullable = false)
     private String password;
+
+    @ManyToMany
+    private List<Actor> favoriteActors = new ArrayList<>();
+    @ManyToMany
+    private List<Film> favoriteFilms = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
+    @OneToOne(mappedBy = "user")
+    private Watchlist watchlist;
 
     //Constructors
     public User() {
